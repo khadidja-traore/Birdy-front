@@ -1,9 +1,9 @@
 import React from 'react';
 //import ListeMessage from './ListeMessage';
 import NavigationPanel from './NavigationPanel';
-import Signup from './Signup';
-import MessageForm from './MessageForm';
-import ListeMessage from './ListeMessage';
+import Signup from '../components/Signup';
+import MessageForm from '../components/MessageForm';
+import ListeMessage from '../components/ListeMessage';
 
 
 class MainPage extends React.Component {
