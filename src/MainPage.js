@@ -8,44 +8,37 @@ import ListeMessage from './ListeMessage';
 
 class MainPage extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {isConnected: false, page_courante: "login" };  //page de connexion
+        this.state = { isConnected: false, page_courante: "login" };  //page de connexion
         this.getConnected = this.setConnected.bind(this);
         this.setLogout = this.setLogout.bind(this);
         this.setSignup = this.setSignup.bind(this);
     }
 
     setConnected = () => {
-        this.setState({isConnected: true, page_courante: "mainpage"});  //mur de tweets 
-        return 0; 
+        this.setState({ isConnected: true, page_courante: "mainpage" });  //mur de tweets 
+        return 0;
     }
 
     setLogout = () => {
-        this.setState({isConnected: false, page_courante: "login" })  //renvoie page de connexion //*{this.state.page_courante === "mainpage" && <ListeMessage/>}
+        this.setState({ isConnected: false, page_courante: "login" })  //renvoie page de connexion //*{this.state.page_courante === "mainpage" && <ListeMessage/>}
     }
 
     setSignup = () => {
-        this.setState({isConnected: false, page_courante: "signup" })
+        this.setState({ isConnected: false, page_courante: "signup" })
 
     }
+    render() {
+        return (<div>
+            {/* <h1> Twister </h1> */}
+            { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} />}
+            <main>
+                {this.state.page_courante === "signup" && <Signup login={this.setConnected} logout={this.setLogout} />}
+                {this.state.page_courante === "mainpage" && <MessageForm />}
+            </main>
 
-    
-    render(){
-        return ( <div> 
-                    <h1> Twister </h1>
-                    { this.state.page_courante !== "signup"  && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} /> }
-                    <main>
-                        {this.state.page_courante === "signup" && <Signup login={this.setConnected} logout={this.setLogout}/>}
-                        {this.state.page_courante === "mainpage" && <MessageForm /> }
-                        
-                       
-
-                    </main>
-                    
-                    
-                    
-                </div>);
+        </div>);
 
     }
 
