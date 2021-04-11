@@ -3,6 +3,7 @@ import Logout from '../components/Logout';
 import Login from '../components/Login';
 import Signup from '../components/Signup';
 import HomePage from '../pages/HomePage'
+import Navbar from '../components/Navbar';
 
 class NavigationPanel extends React.Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class NavigationPanel extends React.Component {
         return <nav id="navPanel">
             {isConnected
                 // ? <Logout logout={logout} />
-                ? <HomePage logout={logout} />
+                ? <Navbar logout={logout} />
                 : <Login login={login} signup={signup} />}
         </nav>
     }

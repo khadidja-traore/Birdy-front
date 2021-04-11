@@ -1,9 +1,15 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import '../styles/HomePage.css';
+import MessageForm from '../components/MessageForm'
 
 function HomePage(props) {
     return (
-        <Navbar logout={props.logout} />
+        <div className="main_body" id="main_body">
+            <div className="col1">Zone Statistique</div>
+            <div className="col2">
+                <MessageForm />
+            </div>
+        </div>
     )
 }
 
