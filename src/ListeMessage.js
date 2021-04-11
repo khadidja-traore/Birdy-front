@@ -1,11 +1,11 @@
-/*import React from 'react';
+import React from 'react';
 import Message from './Message';
 
 class ListeMessage extends React.Component{
 
     constructor(props){
         super(props);
-        this.state = {listemsg: []}
+        this.state = {listemsg: [ {author_id: 1, author_name : "mario", date : "11/04/2021", text :"Le texte de Mario", _id: "007"}]}
     }
 
     render(){
@@ -21,4 +21,3 @@ class ListeMessage extends React.Component{
 }
 
 export default ListeMessage;
-*/

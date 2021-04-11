@@ -2,6 +2,8 @@ import React from 'react';
 //import ListeMessage from './ListeMessage';
 import NavigationPanel from './NavigationPanel';
 import Signup from './Signup';
+import MessageForm from './MessageForm';
+import ListeMessage from './ListeMessage';
 
 
 class MainPage extends React.Component {
@@ -35,6 +37,7 @@ class MainPage extends React.Component {
                     { this.state.page_courante !== "signup"  && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} /> }
                     <main>
                         {this.state.page_courante === "signup" && <Signup login={this.setConnected} logout={this.setLogout}/>}
+                        {this.state.page_courante === "mainpage" && <MessageForm /> }
                         
                        
 
@@ -55,3 +58,6 @@ export default MainPage;
 //ajouter les feuilles de style, interaction utilisateur
 
 //pour le serveur, recherche des derniers messages, message d'une personne, mot clé 
+//{this.state.page_courante === "mainpage" && <ListeMessage />}
+
+//{this.state.page_courante === "mainpage" && <MessageForm /> }

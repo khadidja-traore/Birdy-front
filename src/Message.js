@@ -9,7 +9,7 @@ class Message extends React.Component{
     render(){
         const {author_id, author_name, date, text, _id} =  this.props;
 
-        return <div className="Message" > {author_name, text, date } </div>
+        return <div className="Message" > <p> {author_name, text, date } </p> </div>
     }
 
 }
