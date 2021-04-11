@@ -4,6 +4,7 @@ import NavigationPanel from './NavigationPanel';
 import Signup from '../components/Signup';
 import MessageForm from '../components/MessageForm';
 import ListeMessage from '../components/ListeMessage';
+import HomePage from './HomePage';
 
 
 class MainPage extends React.Component {
@@ -31,11 +32,10 @@ class MainPage extends React.Component {
     }
     render() {
         return (<div>
-            {/* <h1> Twister </h1> */}
             { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} />}
             <main>
                 {this.state.page_courante === "signup" && <Signup login={this.setConnected} logout={this.setLogout} />}
-                {this.state.page_courante === "mainpage" && <MessageForm />}
+                {this.state.page_courante === "mainpage" && <HomePage />}
             </main>
 
         </div>);
