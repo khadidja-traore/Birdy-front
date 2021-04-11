@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import Navbar from '../components/Navbar'
 
 function HomePage(props) {
     return (
-        <Navbar logout={props.logout}/>
+        <Navbar logout={props.logout} />
     )
 }
 
