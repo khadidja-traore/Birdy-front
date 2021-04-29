@@ -13,11 +13,11 @@ class MessageForm extends React.Component {
 
     render() {
         return (
-            <div className='message_form_content'>
+            <div className='message_form_container'>
                 <div className='user_icon_col'>
                     <div className='user_icon'></div>
                 </div>
-                <div className='message_content'>
+                <div className='message_form_content'>
                     <div className='input_area'>
                         <form>
                             <textarea className='input_area_inner' placeholder="What's happening?"></textarea>
