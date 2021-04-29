@@ -1,4 +1,4 @@
-.message_form_content {
+.message_form_container {
     height: 200px;
     background-color: #D8F1F5;
     width: 100%;
@@ -27,7 +27,7 @@
     border-radius: 30px;
 }
 
-.message_content {
+.message_form_content {
     float: right;
     width: 86%;
     overflow: hidden;
@@ -46,7 +46,7 @@
     height: 120px;
     margin-top: 15px;
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 20px;
     box-sizing: border-box;
     border: 2px solid rgb(0, 140, 255);
     border-radius: 15px;
