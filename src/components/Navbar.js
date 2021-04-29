@@ -14,17 +14,17 @@ function Navbar(props) {
                         <input className="searchbox" type="text" name="search" placeholder="Search..."></input>
                     </form>
                 </div>
-                    <div className="navbar_col3 right_navbar_section">
-                        <div className="profile_navbar_col1">
-                            <div className="profile_button">
-                            </div>
-                        </div>
-                        <div class="profile_navbar_col2">
-                            <div onClick={props.logout} className="logout_button">Logout</div>
-                        </div>
+                <div className="navbar_col3 right_navbar_section">
+                    <div className="profile_navbar_col1">
+                        <div className="profile_button"></div>
+                        <div className='profile_name'>Camille</div>
+                    </div>
+                    <div class="profile_navbar_col2">
+                        <div onClick={props.logout} className="logout_button">Logout</div>
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

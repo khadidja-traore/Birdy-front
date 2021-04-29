@@ -1,12 +1,13 @@
 import React from 'react'
 import '../styles/HomePage.css';
-import MessageForm from '../components/MessageForm'
-import Message from '../components/Message'
+import MessageForm from '../components/MessageForm';
+import Message from '../components/Message';
+import ZoneStatistique from '../components/ZoneStatistique';
 
 function HomePage(props) {
     return (
         <div className="main_body" id="main_body">
-            <div className="col1">Zone Statistique</div>
+            <div className="col1"><ZoneStatistique /></div>
             <div className="col2">
                 <MessageForm />
                 <Message author_name={'Jean-Pierre'} author_id={'@jean-pierre-twitter'}
