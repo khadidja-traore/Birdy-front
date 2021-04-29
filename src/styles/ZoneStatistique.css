@@ -1,0 +1,48 @@
+.statistic_container {
+    height: 200px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.header_area {
+    height: 30%;
+    width: 100%;
+}
+
+.header_content {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 10px;
+}
+
+.stats_row_1 {
+    height: 23%;
+    width: 100%;
+}
+
+.row_1_col_1 {
+    height: 100%;
+    width: 60%;
+    float: left;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.row_1_col_2 {
+    color:  rgb(0, 140, 255);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.stats_row_2 {
+    height: 23%;
+    width: 100%;
+}
+
+.stats_row_3 {
+    height: 23%;
+    width: 100%;
+}
