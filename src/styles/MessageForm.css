@@ -1,0 +1,85 @@
+.message_form_container {
+    height: 200px;
+    background-color: #D8F1F5;
+    width: 100%;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 10px;
+}
+
+.user_icon_col {
+    float: left;
+    width: 13%;
+    overflow: hidden;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.user_icon {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    background-image: url(image/profile_picture.jpeg);
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+.message_form_content {
+    float: right;
+    width: 86%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.input_area {
+    height: 70%;
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.input_area_inner {
+    width: 95%;
+    height: 120px;
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 20px;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 140, 255);
+    border-radius: 15px;
+    background-color: white;
+    resize: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input_area_inner:focus {
+    outline: none;
+}
+
+.toolbar_area {
+    height: 30%;
+    display: block;
+    width: 100%;
+    /* position: relative; */
+}
+
+.post_button {
+    width: 100px;
+    float: right;
+    margin-right: 35px;
+    margin-top: 5px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 20px;
+}
+
+.post_button:hover {
+    cursor: pointer;
+    background-color: rgb(93, 177, 247);
+}
+

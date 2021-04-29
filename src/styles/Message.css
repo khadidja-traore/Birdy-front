@@ -1,0 +1,99 @@
+.message_container {
+    margin-top: 15px;
+    height: 350px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.user_icon_col {
+    float: left;
+    width: 13%;
+    overflow: hidden;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.other_user_icon {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    background-image: url(image/second_profile_picture.jpeg);
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+.message_content {
+    float: right;
+    width: 86%;
+    overflow: hidden;
+    height: 100%;
+    /* background-color: limegreen; */
+}
+
+.username_area {
+    height: 25%;
+    width: 100%;
+}
+
+.author_name {
+    font-size: 24px;
+    padding-top: 18px;
+    font-weight: bold;
+}
+
+.author_id {
+    color: slategray;
+}
+
+.message_text_area {
+    height: 45%;
+    width: 95%;
+    font-size: 20px;
+}
+
+.date_area {
+    height: 15%;
+    width: 100%;
+    color: slategray;
+}
+
+.like_comment_area {
+    height: 15%;
+    width: 100%;
+}
+
+.like_col {
+    width: 49%;
+    height: 100%;
+    float: left;
+    border: 2px solid #D9DBE1;
+    color: slategray;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 12px;
+    background-image: url('image/heart_icon.png');
+    background-size: 26px;
+    background-position: 115px 11px; 
+    background-repeat: no-repeat;
+}
+
+.comment_col {
+    width: 49%;
+    height: 100%;
+    float: right;
+    border: 2px solid #D9DBE1;
+    color: slategray;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 12px;
+    background-image: url('image/comment_icon.png');
+    background-size: 26px;
+    background-position: 90px 12px;
+    background-repeat: no-repeat;
+}
+
