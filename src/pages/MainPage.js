@@ -5,6 +5,7 @@ import Signup from '../components/Signup';
 import MessageForm from '../components/MessageForm';
 import ListeMessage from '../components/ListeMessage';
 import HomePage from './HomePage';
+import ProfilePage from './ProfilePage';
 
 
 class MainPage extends React.Component {
@@ -12,9 +13,6 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isConnected: false, page_courante: "login" };  //page de connexion
-        //this.getConnected = this.setConnected.bind(this);
-        //this.setLogout = this.setLogout.bind(this);
-        //this.setSignup = this.setSignup.bind(this);
     }
 
     setConnected = (status, msg) => {
@@ -23,6 +21,11 @@ class MainPage extends React.Component {
         }
 
           //mur de tweets 
+        return 0;
+    }
+
+    setProfile = () => {
+        this.setState({ isConnected: true, page_courante: "profilepage" }); //show profile page
         return 0;
     }
 
@@ -36,10 +39,11 @@ class MainPage extends React.Component {
     }
     render() {
         return (<div>
-            { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} />}
+            { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} profile={this.setProfile}/>}
             <main>
                 {this.state.page_courante === "signup" && <Signup login={this.setConnected} logout={this.setLogout} />}
                 {this.state.page_courante === "mainpage" && <HomePage />}
+                {this.state.page_courante === "profilepage" && <ProfilePage />}
             </main>
 
         </div>);

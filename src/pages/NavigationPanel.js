@@ -26,11 +26,10 @@ class NavigationPanel extends React.Component {
     }
 
     render() {
-        const { login, logout, isConnected, signup } = this.props;
+        const { login, logout, isConnected, signup, profile } = this.props;
         return <nav id="navPanel">
             {isConnected
-                // ? <Logout logout={logout} />
-                ? <Navbar logout={logout} />
+                ? <Navbar logout={logout} profile={profile} login={login}/> // Is a sperate function as login needed for switching back to homepage
                 : <Login login={login} signup={signup} />}
         </nav>
     }
