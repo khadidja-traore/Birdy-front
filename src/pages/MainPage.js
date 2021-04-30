@@ -13,14 +13,14 @@ class MainPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isConnected: false, page_courante: "login" };  //page de connexion
-        this.getConnected = this.setConnected.bind(this);
-        this.setLogout = this.setLogout.bind(this);
-        this.setSignup = this.setSignup.bind(this);
-        this.setProfile = this.setProfile.bind(this);
     }
 
-    setConnected = () => {
-        this.setState({ isConnected: true, page_courante: "mainpage" });  //mur de tweets 
+    setConnected = (status, msg) => {
+        if (status == 200){
+           this.setState({ isConnected: true, page_courante: "mainpage" }); 
+        }
+
+          //mur de tweets 
         return 0;
     }
 
