@@ -1,5 +1,5 @@
 .message_container {
-    margin-top: 15px;
+    margin-bottom: 15px;
     height: 350px;
     box-sizing: border-box;
     border: 2px solid #D9DBE1;
@@ -22,7 +22,7 @@
     margin-top: 15px;
     margin-bottom: 5px;
     margin-right: 15px;
-    background-image: url(image/second_profile_picture.jpeg);
+    background-image: url(image/default_profile_pic.png);
     background-size: 100%;
     border-radius: 30px;
 }
@@ -80,6 +80,7 @@
     background-size: 26px;
     background-position: 115px 11px; 
     background-repeat: no-repeat;
+    filter: invert(33%) sepia(94%) saturate(1123%) hue-rotate(182deg) brightness(97%) contrast(97%);
 }
 
 .comment_col {
@@ -95,5 +96,6 @@
     background-size: 26px;
     background-position: 90px 12px;
     background-repeat: no-repeat;
+    filter: invert(33%) sepia(94%) saturate(1123%) hue-rotate(182deg) brightness(97%) contrast(97%);
 }
 
