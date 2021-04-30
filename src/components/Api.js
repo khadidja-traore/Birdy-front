@@ -8,16 +8,16 @@ export const apiUser = axios.create({
 	});
 
 export const apiFriend = axios.create({
-    baseURL : '/apiFriend/',
+    baseURL : 'http://localhost:4000/apiFriend/',
     timeout : 1000,
-    headers : {'X-Custom-Header' : 'foobar'}
+    headers : {}
     });
     
     
 export const apiMessage = axios.create({
-    baseURL : '/apiMessage/',
+    baseURL : 'http://localhost:4000/apiMessage/',
     timeout : 1000,
-    headers : {'X-Custom-Header' : 'foobar'}
+    headers : {}
     });
         
  

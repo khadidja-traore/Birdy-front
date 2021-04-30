@@ -12,7 +12,8 @@ class MainPage extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { isConnected: false, page_courante: "login" };  //page de connexion
+        // this.state = { isConnected: false, page_courante: "login" };  //page de connexion
+        this.state = {isConnected: true, page_courante: 'mainpage'}; // tmp for view the mainpage
         // this.getConnected = this.setConnected.bind(this);
         // this.setLogout = this.setLogout.bind(this);
         // this.setSignup = this.setSignup.bind(this);
