@@ -1,0 +1,47 @@
+.friend_container {
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.friend_user_icon_col {
+    float: left;
+    width: 48%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.other_user_icon {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    background-image: url(image/second_profile_picture.jpeg);
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+.friend_name_col {
+    width: 48%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.friend_name {
+    font-size: 16px;
+    padding-top: 22px;
+    font-weight: bold;
+    word-wrap: break-word
+}
+
+.friend_id {
+    font-size: 12px;
+    color: slategray;
+    word-wrap: break-word;
+    padding-right: 20px;
+}
