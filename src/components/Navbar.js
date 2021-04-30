@@ -19,7 +19,7 @@ function Navbar(props) {
                         <div onClick={props.profile} className="profile_button"></div>
                         <div onClick={props.profile} className='profile_name'>Camille</div>
                     </div>
-                    <div class="profile_navbar_col2">
+                    <div className="profile_navbar_col2">
                         <div onClick={props.logout} className="logout_button">Logout</div>
                     </div>
                 </div>
