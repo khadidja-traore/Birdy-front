@@ -28,7 +28,7 @@ const ListeMessage = () => {
 
     React.useEffect(() => {
         fetchMessages();
-    }, [])
+    }, [messages])
 
     return (
         <>

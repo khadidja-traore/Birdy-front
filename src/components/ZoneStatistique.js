@@ -42,17 +42,13 @@ const ZoneStatistique = () => {
     const fetchTwittCount = async () => {
         let data = await apiMessage.get('/message').then(({data}) => data);
         var tmp_twittCount = data.length;
-        console.log(tmp_twittCount);
         setTwittCount(data.length);
-        // var sorted_data = data.sort((a,b) => {
-        //     return new Date(a.date).getTime() - 
-        //         new Date(b.date).getTime()
-        // }).reverse();
-        // setMessages(sorted_data);
     } 
 
     React.useEffect(() => {
-        fetchTwittCount();
+        const s = setInterval(() => {
+            fetchTwittCount();
+          }, 1000);
     }, [])
 
     return (
