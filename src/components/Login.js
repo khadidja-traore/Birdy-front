@@ -1,5 +1,5 @@
 import React from 'react';
-//import {apiUser} from './Api';
+import {apiUser} from './Api';
 import produce from 'immer';
 import axios from 'axios';
 
@@ -7,7 +7,7 @@ class Login extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {login_value: 'jj', passsword_value:'ll', status: 0, message: ''};
+        this.state = {login_value: 'jj', password_value:'ll', status: 0, message: ''};
         
     }
 
@@ -19,7 +19,8 @@ class Login extends React.Component {
             });
         */
         //const axios = require('axios');
-        axios.post("http://localhost:4000/apiUser/user/login",{login: this.login_value, password: this.passwod_value},)
+        //axios.post("http://localhost:4000/apiUser/user/login",{login: this.login_value, password: this.passwod_value},)
+        apiUser.post("/user/login", {"login": this.state.login_value, "password": this.state.password_value} )
         .then((response) => {
             this.response_login(response);
         })

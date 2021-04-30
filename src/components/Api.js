@@ -1,9 +1,10 @@
-/*import axios from 'axios';
+import axios from 'axios';
 
+//axios.defaults()
 export const apiUser = axios.create({
-	baseURL : '/apiUser/',
+	baseURL : 'http://localhost:4000/apiUser/',
 	timeout : 1000,
-	headers : {'X-Custom-Header' : 'foobar'}
+	headers : {}
 	});
 
 export const apiFriend = axios.create({
@@ -19,4 +20,4 @@ export const apiMessage = axios.create({
     headers : {'X-Custom-Header' : 'foobar'}
     });
         
-     */   
+ 
