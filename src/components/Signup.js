@@ -39,7 +39,7 @@ class Signup extends React.Component {    //formulaire d'inscription
 
         return (
             <body>
-                <h1 class="page_title">Enregistrement</h1>
+                {/* <h1 class="page_title">Enregistrement</h1> */}
                 <section id="signup_form">
                     <form>
                         <label for="firstname" class="label">Prénom:</label>
