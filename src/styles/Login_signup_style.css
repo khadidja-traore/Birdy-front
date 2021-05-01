@@ -6,26 +6,28 @@
 
 #login_form {
     width: 300px;
-    height: 230px;
+    height: 280px;
     position: absolute;
     margin: auto;
+    margin-top: 200px;
     left: 0;
     right: 0;
-    outline: black solid 2px;
-    box-shadow: 2px 2px 10px 1px black;
+    outline: rgb(0, 140, 255) solid 2px;
     padding: 16px;
+    font-size: 20px;
 }
 
 #signup_form {
     width: 300px;
-    height: 340px;
+    height: 385px;
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
-    outline: black solid 2px;
-    box-shadow: 2px 2px 10px 1px black;
+    outline: rgb(0, 140, 255) solid 2px;
     padding: 16px;
+    margin-top: 150px;
+    font-size: 20px;
 }
 
 .label {
@@ -33,13 +35,78 @@
 }
 
 .button {
-    margin-top: 16px;
-    margin-bottom: 16px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color:rgb(0, 140, 255);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 65px;
+    margin-bottom: 20px;
 }
 
-.signup_button {
-    margin-top: 16px;
-    width: 49%;
+.switch_button {
+    border-radius: 4px;
+    background-color:rgb(0, 140, 255);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.signup_button{
+    border-radius: 4px;
+    background-color:rgb(0, 140, 255);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.switch_button:hover, .signup_button:hover {
+    background-color: rgb(93, 177, 247);
+}
+
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 input {
@@ -50,5 +117,6 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-size: 20px;
   }
 
