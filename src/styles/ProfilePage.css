@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+.main_body {
+    width: 1024px;
+    margin: 10px auto 10px auto; 
+    height: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.col1 {
+    width: 18%;
+    float: left;
+    height: 800px;
+    /* background-color: rgb(228, 228, 228); */
+}
+
+.col2 {
+    width: 80%;
+    margin-left: 2%;
+    float: left;
+    height: auto;
+    /* height: 800px; */
+    /* background-color:rgb(228, 228, 228); */
+}
+
+.friend_header {
+    height: 55px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 15px;
+}

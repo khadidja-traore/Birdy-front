@@ -56,6 +56,10 @@ body {
     background-size: 100%;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 /* profile nav bar part begins */
 
 /* .right_navbar_section {
@@ -100,7 +104,7 @@ body {
     width: 40px;
     margin: 10px;
     float: left;
-    background-image: url(image/profile_picture.jpeg);
+    background-image: url(image/default_profile_pic.png);
     background-size: 100%;
     border-radius: 20px;
 }
@@ -112,6 +116,10 @@ body {
 .profile_name {
     margin-top: 22px;
     font-size: 18px;
+}
+
+.profile_name:hover {
+    cursor: pointer;
 }
 
 .searchbox {
