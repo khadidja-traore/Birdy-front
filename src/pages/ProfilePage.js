@@ -28,8 +28,8 @@ function ProfilePage(props) {
         fetchFriends();
     }
 
-    const deleteFriend = async (id) => {
-        let res = await apiFriend.delete(`/friends/${id}`).catch((e) => alert(e.message));
+    const deleteFriend = async (friend_name) => {
+        let res = await apiFriend.delete(`/friends/${friend_name}`).catch((e) => alert(e.message));
         fetchFriends();
     }
 
