@@ -1,13 +1,15 @@
 import React from 'react'
 import '../styles/ProfilePage.css';
+import '../styles/FriendForm.css';
 import ListeMessage from '../components/ListeMessage'
 import ListeFriend from '../components/ListeFriend'
-import FriendForm from '../components/FriendForm';
 import { apiFriend } from '../components/Api';
+import { apiMessage } from '../components/Api';
 
 function ProfilePage(props) {
-    const [friend, setFriend] = React.useState('')
+    const [friend, setFriend] = React.useState('');
     const [friends, setFriends] = React.useState([]);
+    const [messages, setMessages] = React.useState([]);
 
     const fetchFriends = async () => {
         let data = await apiFriend.get('/friends').then(({ data }) => data);
@@ -25,6 +27,20 @@ function ProfilePage(props) {
         setFriend('');
         fetchFriends();
     }
+
+    const fetchMessages = async () => {
+        let data = await apiMessage.get('/message').then(({ data }) => data);
+        var sorted_data = data.sort((a, b) => {
+            return new Date(a.date).getTime() -
+                new Date(b.date).getTime()
+        }).reverse();
+        setMessages(sorted_data);
+    }
+
+    React.useEffect(() => {
+        fetchMessages();
+        fetchFriends();
+    }, [])
 
     return (
         <div className="main_body" id="main_body">
@@ -44,7 +60,7 @@ function ProfilePage(props) {
                 <ListeFriend friends={friends} />
             </div>
             <div className="col2">
-                <ListeMessage />
+                <ListeMessage messages={messages} />
             </div>
         </div>
     )
