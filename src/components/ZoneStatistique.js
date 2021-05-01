@@ -48,7 +48,7 @@ const ZoneStatistique = () => {
     React.useEffect(() => {
         const s = setInterval(() => {
             fetchTwittCount();
-          }, 1000);
+          }, 100000);
     }, [])
 
     return (

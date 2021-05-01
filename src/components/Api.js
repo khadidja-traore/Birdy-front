@@ -16,7 +16,7 @@ export const apiFriend = axios.create({
     
 export const apiMessage = axios.create({
     baseURL : 'http://localhost:4000/apiMessage/',
-    timeout : 1000,
+    timeout : 100000,
     headers : {}
     });
         
