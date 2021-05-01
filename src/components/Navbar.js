@@ -23,6 +23,10 @@ class Navbar extends React.Component {
                     {/* <div className="searchbox_wrapper">Search for messeages and friends</div> */}
                     <form>
                         <input className="searchbox" type="text" name="search" placeholder="Search..."></input>
+
+
+
+                        
                     </form>
                 </div>
                 <div className="navbar_col3 right_navbar_section">
@@ -31,7 +35,7 @@ class Navbar extends React.Component {
                         <div onClick={this.props.profile} className='profile_name'>{this.props.user_login}</div>
                     </div>
                     <div className="profile_navbar_col2">
-                        <div onClick={this.send()} className="logout_button">Déconnexion</div>
+                        <div onClick={() => {this.send()}} className="logout_button">Déconnexion</div>
                     </div>
                 </div>
             </div>
