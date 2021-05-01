@@ -16,7 +16,7 @@ const ListeMessage = () => {
     // }]);
 
     const [messages, setMessages] = React.useState([]);
-
+/*
     const fetchMessages = async () => {
         let data = await apiMessage.get('/message').then(({data}) => data);
         var sorted_data = data.sort((a,b) => {
@@ -29,7 +29,7 @@ const ListeMessage = () => {
     React.useEffect(() => {
         fetchMessages();
     }, [messages])
-
+*/
     return (
         <>
             {messages.map((message) => (

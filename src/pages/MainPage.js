@@ -6,13 +6,14 @@ import MessageForm from '../components/MessageForm';
 import ListeMessage from '../components/ListeMessage';
 import HomePage from './HomePage';
 import ProfilePage from './ProfilePage';
+import SearchResults from './SearchResults';
 
 
 class MainPage extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { isConnected: false, page_courante: "login", user_connected:0 , login_connected: ''};  //page de connexion
+        this.state = { isConnected: false, page_courante: "login", user_connected:0 , login_connected: '', results: []};  //page de connexion
         //this.state = {isConnected: true, page_courante: 'mainpage'}; // tmp for view the mainpage
         
     }
@@ -34,17 +35,22 @@ class MainPage extends React.Component {
 
     }
 
+    setSearch = (list_msg) => {
+        this.setState({ isConnected: true, page_courante: "searchresults", results: list_msg})
+    }
+
     setUserconnected = (userid, login) => {  //établit la session, défini l'id et le nom de l'utilisateur connecté
         this.setState({user_connected: userid, login_connected: login})
     }
 
     render() {
         return (<div>
-            { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} profile={this.setProfile} user_session={this.setUserconnected} user_id={this.state.user_connected} user_login={this.state.login_connected}/>}
+            { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} profile={this.setProfile} user_session={this.setUserconnected} user_id={this.state.user_connected} user_login={this.state.login_connected} search={this.setSearch}/>}
             <main>
                 {this.state.page_courante === "signup" && <Signup logout={this.setLogout} />}
-                {this.state.page_courante === "mainpage" && <HomePage />}
+                {/*this.state.page_courante === "mainpage" && <HomePage />*/}
                 {this.state.page_courante === "profilepage" && <ProfilePage />}
+                {this.state.page_courante === "searchresults" && <SearchResults/>}
             </main>
 
         </div>);
