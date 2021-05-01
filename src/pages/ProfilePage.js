@@ -2,6 +2,8 @@ import React from 'react'
 import '../styles/ProfilePage.css';
 import ListeMessage from '../components/ListeMessage'
 import ListeFriend from '../components/ListeFriend'
+import Friend from '../components/Friend';
+import FriendForm from '../components/FriendForm';
 
 function ProfilePage(props) {
     return (
@@ -10,6 +12,7 @@ function ProfilePage(props) {
                 <div className='friend_header'>
                     Friends:
                 </div>
+                <FriendForm />
                 <ListeFriend />
             </div>
             <div className="col2">
