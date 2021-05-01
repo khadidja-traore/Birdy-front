@@ -28,6 +28,11 @@ function ProfilePage(props) {
         fetchFriends();
     }
 
+    const deleteFriend = async (id) => {
+        let res = await apiFriend.delete(`/friends/${id}`).catch((e) => alert(e.message));
+        fetchFriends();
+    }
+
     const fetchMessages = async () => {
         let data = await apiMessage.get('/message').then(({ data }) => data);
         var sorted_data = data.sort((a, b) => {
@@ -57,7 +62,7 @@ function ProfilePage(props) {
                     </div>
                     <div onClick={() => { addFriend() }} className="add_friend_button">Add Friend</div>
                 </div>
-                <ListeFriend friends={friends} />
+                <ListeFriend friends={friends} deleteFriend={deleteFriend}/>
             </div>
             <div className="col2">
                 <ListeMessage messages={messages} />
