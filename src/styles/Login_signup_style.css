@@ -6,7 +6,7 @@
 
 #login_form {
     width: 300px;
-    height: 280px;
+    height: 230px;
     position: absolute;
     margin: auto;
     left: 0;
@@ -18,7 +18,7 @@
 
 #signup_form {
     width: 300px;
-    height: 480px;
+    height: 340px;
     position: absolute;
     margin: auto;
     left: 0;

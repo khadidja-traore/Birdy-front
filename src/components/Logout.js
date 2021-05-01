@@ -7,6 +7,8 @@ class Logout extends React.Component {
         super(props);
     }
 
+    
+
     render(){
         return <div> <button class="button" onClick =  {() => this.props.logout() } > Déconnexion </button> </div>
 
