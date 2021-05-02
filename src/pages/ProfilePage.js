@@ -6,13 +6,15 @@ import ListeFriend from '../components/ListeFriend'
 import { apiFriend } from '../components/Api';
 import { apiMessage } from '../components/Api';
 
-function ProfilePage(props) {
+function ProfilePage({ user_id, user_login }) {
     const [friend, setFriend] = React.useState('');
     const [friends, setFriends] = React.useState([]);
     const [messages, setMessages] = React.useState([]);
 
+    // only friends of this user
     const fetchFriends = async () => {
-        let data = await apiFriend.get('/friends').then(({ data }) => data);
+        let data = await apiFriend.get(`/friends/liste/${user_login}`).then(({ data }) => data);
+        console.log(data);
         setFriends(data);
     }
 
@@ -22,7 +24,7 @@ function ProfilePage(props) {
             return
         }
         let res = await apiFriend.post('/friends', {
-            firstUser: 'Camille', secondUser: friend
+            firstUser: user_login, secondUser: friend
         }).catch((e) => alert(e.message));
         setFriend('');
         fetchFriends();
@@ -32,9 +34,10 @@ function ProfilePage(props) {
         let res = await apiFriend.delete(`/friends/${friend_name}`).catch((e) => alert(e.message));
         fetchFriends();
     }
-
+    
+    // only messages of this user
     const fetchMessages = async () => {
-        let data = await apiMessage.get('/message').then(({ data }) => data);
+        let data = await apiMessage.get(`/message/${user_id}`).then(({ data }) => data);
         var sorted_data = data.sort((a, b) => {
             return new Date(a.date).getTime() -
                 new Date(b.date).getTime()
@@ -62,7 +65,7 @@ function ProfilePage(props) {
                     </div>
                     <div onClick={() => { addFriend() }} className="add_friend_button">Add Friend</div>
                 </div>
-                <ListeFriend friends={friends} deleteFriend={deleteFriend}/>
+                <ListeFriend friends={friends} deleteFriend={deleteFriend} />
             </div>
             <div className="col2">
                 <ListeMessage messages={messages} />

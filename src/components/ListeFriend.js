@@ -5,12 +5,6 @@ import { apiFriend } from './Api';
 // change from react component to function, in order to intergrate useState
 
 const ListeFriend = ({ friends, deleteFriend}) => {
-    // Mock Data
-    // const [friends, setFriends] = React.useState([
-    //     { friend_id: '@valentine_twitter', friend_name: 'Valentine' },
-    //     { friend_id: '@nathan_twitter', friend_name: 'Nathan' },
-    //     { friend_id: '@lucas_twitter', friend_name: 'Lucas' }]);
-
     return (
         <>
             {friends.map((friend) => (

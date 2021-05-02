@@ -23,10 +23,6 @@ class Navbar extends React.Component {
                     {/* <div className="searchbox_wrapper">Search for messeages and friends</div> */}
                     <form>
                         <input className="searchbox" type="text" name="search" placeholder="Search..."></input>
-
-
-
-                        
                     </form>
                 </div>
                 <div className="navbar_col3 right_navbar_section">
