@@ -62,7 +62,7 @@ class MainPage extends React.Component {
                 {this.state.page_courante === "signup" && <Signup logout={this.setLogout} />}
                 {this.state.page_courante === "mainpage" && <HomePage user_id={this.state.user_connected} user_login={this.state.login_connected} viewuser={this.setUserview} searched_messages={this.state.messages} />}
                 {this.state.page_courante === "profilepage" && <ProfilePage user_id={this.state.user_connected} user_login={this.state.login_connected}/>}
-                {this.state.page_courante === "vueprofil" && <ProfileUser user_view={this.state.user_view} login_view={this.state.login_view} viewuser={this.setUserview}/>}
+                {this.state.page_courante === "vueprofil" && <ProfileUser user_id={this.state.user_connected} user_view={this.state.user_view} login_view={this.state.login_view} viewuser={this.setUserview}/>}
             </main>
 
         </div>);

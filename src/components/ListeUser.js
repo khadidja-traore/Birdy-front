@@ -10,7 +10,7 @@ const ListeUser = ({user_id, users, viewuser}) => {
                 // Version with friend_id
                 // <Friend friend_id={friend.friend_id} friend_name={friend.friend_name}></Friend>
                 (user.id != user_id ) && 
-                <User viewuser={viewuser} user_id={user.id} user_name={user.login}></User>
+                <User viewuser={viewuser} user_view={user.id} user_name={user.login}></User>
             
             ))}
         </>

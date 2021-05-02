@@ -6,7 +6,7 @@ import ListeUser from '../components/ListeUser'
 import { apiFriend } from '../components/Api';
 import { apiMessage } from '../components/Api';
 
-function ProfileUser({ user_view, login_view, viewuser }) {
+function ProfileUser({ user_id, user_view, login_view, viewuser }) {
     //const [friend, setFriend] = React.useState('');
     const [friends, setFriends] = React.useState([]);
     const [messages, setMessages] = React.useState([]);
@@ -67,7 +67,7 @@ function ProfileUser({ user_view, login_view, viewuser }) {
                     </div>
                     <div onClick={() => { addFriend() }} className="add_friend_button">Add Friend</div>
     </div>*/}
-                <ListeUser users={friends} viewuser={viewuser} />
+                <ListeUser user_id={user_id} users={friends} viewuser={viewuser} />
             </div>
             <div className="col2">
                 <ListeMessage messages={messages} />
