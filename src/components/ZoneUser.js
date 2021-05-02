@@ -2,7 +2,7 @@ import React from 'react';
 import ListeUser from './ListeUser';
 import {apiUser} from '../components/Api';
 
-function ZoneUser({viewuser}) {
+function ZoneUser({user_id, viewuser}) {
     const [users, setUsers] = React.useState([]);
 
 
@@ -23,7 +23,7 @@ function ZoneUser({viewuser}) {
                 <div className='user_header'>
                     Utilisateurs:
                 </div>
-                <ListeUser users={users} viewuser={viewuser} />
+                <ListeUser user_id={user_id} users={users} viewuser={viewuser} />
             </div>
             
         </div>

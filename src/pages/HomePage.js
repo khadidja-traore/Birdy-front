@@ -56,7 +56,7 @@ function HomePage({ user_id, user_login, viewuser}) {
 
     return (
         <div className="main_body" id="main_body">
-            <div className="col1"><ZoneStatistique twittCount={twittCount} friends={friends}/> <ZoneUser viewuser={viewuser}/> </div>
+            <div className="col1"><ZoneStatistique twittCount={twittCount} friends={friends}/> <ZoneUser user_id={user_id} viewuser={viewuser}/> </div>
             <div className="col2">
                 <div className='message_form_container'>
                     <div className='user_icon_col'>
