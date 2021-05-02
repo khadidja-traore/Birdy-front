@@ -4,11 +4,13 @@ import '../styles/MessageForm.css';
 import ListeMessage from '../components/ListeMessage';
 import ZoneStatistique from '../components/ZoneStatistique';
 import { apiMessage } from '../components/Api';
+import {apiFriend} from '../components/Api';
 
 function HomePage({ user_id, user_login }) {
     const [messages, setMessages] = React.useState([]);
     const [text, setText] = React.useState('')
     const [twittCount, setTwittCount] = React.useState(0);
+    const [friends, setFriends] = React.useState([]);
 
     const fetchMessages = async () => {
         let data = await apiMessage.get('/message').then(({ data }) => data);
@@ -39,14 +41,21 @@ function HomePage({ user_id, user_login }) {
         setTwittCount(data.length);
     }
 
+    const fetchFriends = async () => {
+        let data = await apiFriend.get(`/friends/liste/${user_login}`).then(({ data }) => data);
+        console.log(data);
+        setFriends(data.length);
+    }
+
     React.useEffect(() => {
         fetchMessages();
         fetchTwittCount();
+        fetchFriends();
     }, [])
 
     return (
         <div className="main_body" id="main_body">
-            <div className="col1"><ZoneStatistique twittCount={twittCount} /></div>
+            <div className="col1"><ZoneStatistique twittCount={twittCount} friends={friends}/></div>
             <div className="col2">
                 <div className='message_form_container'>
                     <div className='user_icon_col'>

@@ -1,5 +1,5 @@
 .statistic_container {
-    height: 200px;
+    height: 150px;
     box-sizing: border-box;
     border: 2px solid #D9DBE1;
     width: 100%;
@@ -7,7 +7,7 @@
 }
 
 .header_area {
-    height: 30%;
+    height: 40%;
     width: 100%;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .stats_row_1 {
-    height: 23%;
+    height: 29%;
     width: 100%;
 }
 
@@ -38,11 +38,11 @@
 }
 
 .stats_row_2 {
-    height: 23%;
+    height: 29%;
     width: 100%;
 }
 
-.stats_row_3 {
+/* .stats_row_3 {
     height: 23%;
     width: 100%;
-}
+} */
