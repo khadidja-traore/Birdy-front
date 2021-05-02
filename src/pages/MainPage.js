@@ -43,8 +43,8 @@ class MainPage extends React.Component {
             { this.state.page_courante !== "signup" && <NavigationPanel login={this.setConnected} logout={this.setLogout} isConnected={this.state.isConnected} signup={this.setSignup} profile={this.setProfile} user_session={this.setUserconnected} user_id={this.state.user_connected} user_login={this.state.login_connected}/>}
             <main>
                 {this.state.page_courante === "signup" && <Signup logout={this.setLogout} />}
-                {this.state.page_courante === "mainpage" && <HomePage />}
-                {this.state.page_courante === "profilepage" && <ProfilePage />}
+                {this.state.page_courante === "mainpage" && <HomePage user_id={this.state.user_connected} user_login={this.state.login_connected}/>}
+                {this.state.page_courante === "profilepage" && <ProfilePage user_id={this.state.user_connected} user_login={this.state.login_connected}/>}
             </main>
 
         </div>);

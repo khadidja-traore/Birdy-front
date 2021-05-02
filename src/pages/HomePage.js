@@ -5,7 +5,7 @@ import ListeMessage from '../components/ListeMessage';
 import ZoneStatistique from '../components/ZoneStatistique';
 import { apiMessage } from '../components/Api';
 
-function HomePage(props) {
+function HomePage({ user_id, user_login }) {
     const [messages, setMessages] = React.useState([]);
     const [text, setText] = React.useState('')
     const [twittCount, setTwittCount] = React.useState(0);
@@ -24,9 +24,8 @@ function HomePage(props) {
             alert('Please input text message. It can not be empty.')
             return
         }
-
-        let res = await apiMessage.post('/message/187239004', {
-            author_name: 'Camille', texte: text
+        let res = await apiMessage.post(`/message/${user_id}`, {
+            author_name: user_login, texte: text
         })
         console.log(res);
         setText('');
@@ -35,10 +34,10 @@ function HomePage(props) {
     }
 
     const fetchTwittCount = async () => {
-        let data = await apiMessage.get('/message').then(({data}) => data);
+        let data = await apiMessage.get('/message').then(({ data }) => data);
         var tmp_twittCount = data.length;
         setTwittCount(data.length);
-    } 
+    }
 
     React.useEffect(() => {
         fetchMessages();
@@ -47,7 +46,7 @@ function HomePage(props) {
 
     return (
         <div className="main_body" id="main_body">
-            <div className="col1"><ZoneStatistique twittCount={twittCount}/></div>
+            <div className="col1"><ZoneStatistique twittCount={twittCount} /></div>
             <div className="col2">
                 <div className='message_form_container'>
                     <div className='user_icon_col'>

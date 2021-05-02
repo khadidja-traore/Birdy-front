@@ -28,21 +28,20 @@ body {
 
 
 .navbar_col1 {
-    width: 26%;
+    width: 17%;
     float: left;
     height: 100%;
 }
 
 .navbar_col2 {
-    width: 44%;
+    width: 50%;
     margin-left: 2%;
     float: left;
     height: 100%;
 }
 
 .navbar_col3 {
-    width: 26%;
-    margin-left: 2%;
+    width: 31%;
     float: left;
     height: 100%;
 }
@@ -61,9 +60,6 @@ body {
 }
 
 /* profile nav bar part begins */
-
-/* .right_navbar_section {
-} */
 
 .profile_navbar_col1 {
     width: 49%;
