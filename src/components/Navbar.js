@@ -1,42 +1,42 @@
 //import { ReactComponent } from '*.svg';
 import React from 'react';
 import '../styles/Navbar.css';
-import {apiUser} from './Api';
+import { apiUser } from './Api';
 
-class Navbar extends React.Component {
+function Navbar({ logout, profile, login, user_id, user_login, search}) {
+    const [searchWord, setSearchWord] = React.useState('');
 
-
-    send = () => {
-        apiUser.delete(`/user/logout/${this.props.user_id}`)
-        .then(() => this.props.logout())
-        .catch((e) => alert(e.message + "\requte de logout \n500: Erreur interne"))
+    const send = () => {
+        apiUser.delete(`/user/logout/${user_id}`)
+            .then(() => logout())
+            .catch((e) => alert(e.message + "\requte de logout \n500: Erreur interne"))
     }
 
-
-    render() {return (
+    return (
         <div className="navbar" id="main_navbar">
             <div className="navbar_inner">
                 <div className="navbar_col1">
-                    <div onClick={this.props.login} className="logo"></div>
+                    <div onClick={login} className="logo"></div>
                 </div>
                 <div className="navbar_col2">
-                    {/* <div className="searchbox_wrapper">Search for messeages and friends</div> */}
                     <form>
-                        <input className="searchbox" type="text" name="search" placeholder="Search..."></input>
+                        <input className="searchbox" type="text" name="search" placeholder="Search..." value={searchWord}
+                            onChange={(e) => setSearchWord(e.target.value)}></input>
                     </form>
+                    <div onClick={() => { search(searchWord) }} className="search_button">Search</div>
                 </div>
                 <div className="navbar_col3 right_navbar_section">
                     <div className="profile_navbar_col1">
-                        <div onClick={this.props.profile} className="profile_button"></div>
-                        <div onClick={this.props.profile} className='profile_name'>{this.props.user_login}</div>
+                        <div onClick={profile} className="profile_button"></div>
+                        <div onClick={profile} className='profile_name'>{user_login}</div>
                     </div>
                     <div className="profile_navbar_col2">
-                        <div onClick={() => {this.send()}} className="logout_button">Déconnexion</div>
+                        <div onClick={() => { send() }} className="logout_button">Déconnexion</div>
                     </div>
                 </div>
             </div>
         </div>
-    )}
+    )
 }
 
 export default Navbar;

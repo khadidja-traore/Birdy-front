@@ -121,7 +121,8 @@ body {
 .searchbox {
     margin: 10px;
     height: 40px;
-    width: 430px;
+    width: 350px;
+    float: left;
     font-size: 18px;
     border: 2px solid #ccc;
     border-radius: 10px;
@@ -133,9 +134,25 @@ body {
     background-repeat: no-repeat;
     padding: 12px 0px 12px 38px;
 }
-
 .searchbox:focus {
     outline: none;
+}
+
+.search_button {
+    margin-left: 380px;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 20px;
+}
+
+.search_button:hover {
+    cursor: pointer;
+    background-color: rgb(93, 177, 247);
 }
 
 
