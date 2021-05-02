@@ -6,7 +6,7 @@ import ZoneStatistique from '../components/ZoneStatistique';
 import { apiMessage } from '../components/Api';
 import {apiFriend} from '../components/Api';
 
-function HomePage({ user_id, user_login }) {
+function HomePage({ user_id, user_login, searched_messages}) {
     const [messages, setMessages] = React.useState([]);
     const [text, setText] = React.useState('')
     const [twittCount, setTwittCount] = React.useState(0);
@@ -48,10 +48,14 @@ function HomePage({ user_id, user_login }) {
     }
 
     React.useEffect(() => {
-        fetchMessages();
+        if(searched_messages.length > 0) {
+            setMessages(searched_messages);
+        } else {
+            fetchMessages();
+        } 
         fetchTwittCount();
         fetchFriends();
-    }, [])
+    }, [searched_messages])
 
     return (
         <div className="main_body" id="main_body">
