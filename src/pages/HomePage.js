@@ -3,10 +3,11 @@ import '../styles/HomePage.css';
 import '../styles/MessageForm.css';
 import ListeMessage from '../components/ListeMessage';
 import ZoneStatistique from '../components/ZoneStatistique';
+import ZoneUser from '../components/ZoneUser';
 import { apiMessage } from '../components/Api';
 import {apiFriend} from '../components/Api';
 
-function HomePage({ user_id, user_login, searched_messages}) {
+function HomePage({ user_id, user_login, viewuser, searched_messages}) {
     const [messages, setMessages] = React.useState([]);
     const [text, setText] = React.useState('')
     const [twittCount, setTwittCount] = React.useState(0);
@@ -59,7 +60,7 @@ function HomePage({ user_id, user_login, searched_messages}) {
 
     return (
         <div className="main_body" id="main_body">
-            <div className="col1"><ZoneStatistique twittCount={twittCount} friends={friends}/></div>
+            <div className="col1"><ZoneStatistique twittCount={twittCount} friends={friends}/> <ZoneUser user_id={user_id} viewuser={viewuser}/> </div>
             <div className="col2">
                 <div className='message_form_container'>
                     <div className='user_icon_col'>

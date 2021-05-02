@@ -1,0 +1,63 @@
+.user_container {
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.user_user_icon_col {
+    float: left;
+    width: 48%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.user_user_icon {
+    float: right;
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    background-image: url(image/default_profile_pic.png);
+    background-size: 100%;
+    border-radius: 30px;
+}
+
+.user_user_icon:hover {
+    /*background-image: url(image/delete.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 10px 10px; 
+    background-color: rgb(224, 223, 223);*/
+    cursor: pointer;
+}
+
+.user_name_col {
+    width: 48%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.user_name {
+    font-size: 16px;
+    padding-top: 38px;
+    font-weight: bold;
+    word-wrap: break-word
+}
+
+
+.user_header {
+    height: 55px;
+    box-sizing: border-box;
+    border: 2px solid #D9DBE1;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 15px;
+}
