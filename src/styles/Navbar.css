@@ -87,7 +87,6 @@ body {
     left: 5px;
     line-height: 38px;
     border-radius: 20px;
-    /* box-shadow: 0.6px 0.6px 20px ; */
 }
 
 .logout_button:hover {

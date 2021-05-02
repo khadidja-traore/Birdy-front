@@ -18,10 +18,6 @@ const ZoneStatistique = ({ twittCount, friends }) => {
                 {<div className='row_1_col_2'>{friends}</div>}
 
             </div>
-            {/* <div className='stats_row_3'>
-                <div className='row_1_col_1'>Followers:</div>
-                <div className='row_1_col_2'>0</div>
-            </div> */}
         </div>
     )
 }

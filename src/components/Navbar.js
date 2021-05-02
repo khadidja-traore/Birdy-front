@@ -1,4 +1,3 @@
-//import { ReactComponent } from '*.svg';
 import React from 'react';
 import '../styles/Navbar.css';
 import { apiUser } from './Api';

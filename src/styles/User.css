@@ -27,11 +27,6 @@
 }
 
 .user_user_icon:hover {
-    /*background-image: url(image/delete.png);
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 10px 10px; 
-    background-color: rgb(224, 223, 223);*/
     cursor: pointer;
 }
 

@@ -1,20 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MainPage from './pages/MainPage';
-// import './login_signup_style.css';
 import './styles/Login_signup_style.css';
 
-/*
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-*/
 
 ReactDOM.render(<MainPage />, document.getElementById('root'));
 

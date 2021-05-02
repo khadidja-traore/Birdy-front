@@ -31,5 +31,3 @@ const FriendForm = () => {
 }
 
 export default FriendForm;
-
-/* <div onClick={addFriend} className="add_friend_button">Logout</div> */

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Friend.css';
-import { apiFriend } from '../components/Api';
 
 const Friend = ({ deleteFriend, friend_id, friend_name}) => {
     return (
@@ -10,7 +9,6 @@ const Friend = ({ deleteFriend, friend_id, friend_name}) => {
             </div>
             <div className='friend_name_col'>
                 <div className='friend_name'>{friend_name}</div>
-                {/* <div className='friend_id'>{friend_id}</div> */}
             </div>
         </div>
     )

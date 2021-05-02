@@ -4,7 +4,7 @@ import '../styles/Message.css';
 class Message extends React.Component {
 
     constructor(props) {
-        super(props); //recoit le texte du message en propriété
+        super(props);
     }
 
     render() {

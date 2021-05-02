@@ -1,8 +1,5 @@
 import React from 'react';
 import Message from './Message';
-import { apiMessage } from './Api';
-
-// change from react component to function, in order to intergrate useState
 
 const ListeMessage = ({ messages }) => {
     return (

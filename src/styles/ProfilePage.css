@@ -24,7 +24,6 @@ body {
     width: 18%;
     float: left;
     height: 800px;
-    /* background-color: rgb(228, 228, 228); */
 }
 
 .col2 {
@@ -32,8 +31,6 @@ body {
     margin-left: 2%;
     float: left;
     height: auto;
-    /* height: 800px; */
-    /* background-color:rgb(228, 228, 228); */
 }
 
 .friend_header {

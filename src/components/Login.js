@@ -1,7 +1,5 @@
 import React from 'react';
 import { apiUser } from './Api';
-import produce from 'immer';
-import axios from 'axios';
 
 class Login extends React.Component {
 
@@ -20,39 +18,25 @@ class Login extends React.Component {
             })
             .catch((e) => alert(e.message + "\n\n400: Requête invalide : login et password nécessaires \n401: Utilisateur inconnu \n403: login et/ou mot de passe invalide(s)\n500: Erreur interne "))
 
-        //this.props.login(this.state.status, this.state.message);
     }
 
     response_login = (response) => {
         if (response.data["status"] == 200) {
-            this.props.user_session(response.data.id_user, this.state.login)       //définir la session de l'utilisateur
-            //this.setState({user_connected: response.data.id_user})     //identifiant de l'utilisateur
+            this.props.user_session(response.data.id_user, this.state.login)
             this.props.login();
-            //this.setState({ status: response.data["status"], message: response.data["message"] })
         }
 
     }
 
     handleInputChange = (event) => {
-
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({ [nam]: val });
-        /*
-                const target = event.target;
-                const name = target.name;
-                if (name === "login") {
-                    this.setState({ login_value: event.target.value });
-                }
-                if (name === "password") {
-                    this.setState({ password_value: event.target.value });
-                }*/
     }
 
     render() {
         return (<div> Prêt à etre connecté ? Formulaire de connexion  </div>,
             <body>
-                {/* <h1 class="page_title">Ouvrir une session</h1> */}
                 <section id="login_form">
                     <form>
                         <label for="login" class="label">Login:</label>
