@@ -10,7 +10,7 @@ const ListeFriend = ({ friends, deleteFriend}) => {
             {friends.map((friend) => (
                 // Version with friend_id
                 // <Friend friend_id={friend.friend_id} friend_name={friend.friend_name}></Friend>
-                <Friend deleteFriend={deleteFriend} friend_id={12300914} friend_name={friend.secondUser}></Friend>
+                <Friend deleteFriend={deleteFriend} friend_name={friend}></Friend>
             ))}
         </>
     )
