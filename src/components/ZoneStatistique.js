@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/ZoneStatistique.css';
 import { apiMessage } from './Api';
 
-const ZoneStatistique = ({ twittCount }) => {
+const ZoneStatistique = ({ twittCount, friends }) => {
     // const [followingCount, setFollowingCount] = React.useState(0);
     // const [followersCount, setFollowersCount] = React.useState(0);
 
@@ -16,9 +16,9 @@ const ZoneStatistique = ({ twittCount }) => {
                 <div className='row_1_col_2'>{twittCount}</div>
             </div>
             <div className='stats_row_2'>
-                <div className='row_1_col_1'>Following:</div>
-                {/* <div className='row_1_col_2'>{followingCount}</div> */}
-                <div className='row_1_col_2'>0</div>
+                <div className='row_1_col_1'>Friends:</div>
+                {<div className='row_1_col_2'>{friends}</div>}
+                
             </div>
             <div className='stats_row_3'>
                 <div className='row_1_col_1'>Followers:</div>

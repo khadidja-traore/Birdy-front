@@ -25,7 +25,7 @@ function ProfilePage({ user_id, user_login }) {
         }
         let res = await apiFriend.post('/friends', {
             firstUser: user_login, secondUser: friend
-        }).catch((e) => alert(e.message));
+        }).catch((e) => alert(e.message + "\n\n400: Déjà amis \n401: Ami inconnu\n500: Erreur interne"));
         setFriend('');
         fetchFriends();
     }
